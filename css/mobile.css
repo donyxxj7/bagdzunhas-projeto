@@ -1,0 +1,186 @@
+/* ====== ESTILO PRINCIPAL ====== */
+.tabela-simples {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px 0;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(255, 107, 139, 0.2);
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tabela-simples:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(255, 107, 139, 0.3);
+  }
+  
+  .tabela-simples th {
+    background: linear-gradient(135deg, #ff85a2 0%, #ff6b8b 100%);
+    color: white;
+    padding: 18px 25px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  
+  .tabela-simples th:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background: rgba(255,255,255,0.3);
+  }
+  
+  .tabela-simples td {
+    padding: 16px 25px;
+    border-bottom: 1px solid #fff0f5;
+    color: #555;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .tabela-simples tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .tabela-simples tr:hover td {
+    background: #fff9fa;
+    color: #333;
+  }
+  
+  .tabela-simples tr:hover td:first-child {
+    padding-left: 30px;
+  }
+  
+  .tabela-simples td:first-child::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: #ff6b8b;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .tabela-simples tr:hover td:first-child::before {
+    opacity: 1;
+    left: 20px;
+  }
+  
+  .tabela-simples td:nth-child(2) {
+    font-weight: 600;
+    color: #d14d8b;
+  }
+  
+  /* ====== LINHA DESTAQUE ====== */
+  .tabela-simples tr.destaque {
+    background: #fff0f5;
+  }
+  
+  .tabela-simples tr.destaque td {
+    font-weight: 600;
+    color: #c7356e;
+  }
+  
+  .tabela-simples tr.destaque::after {
+    content: "★ Destaque";
+    position: absolute;
+    right: 20px;
+    background: #ff6b8b;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  /* ====== VERSÃO MOBILE ====== */
+  @media (max-width: 768px) {
+    .tabela-simples {
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(255, 107, 139, 0.15);
+    }
+    
+    .tabela-simples thead {
+      display: none;
+    }
+    
+    .tabela-simples tbody,
+    .tabela-simples tr,
+    .tabela-simples td {
+      display: block;
+      width: 100%;
+    }
+    
+    .tabela-simples tr {
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    
+    .tabela-simples td {
+      padding: 12px 15px;
+      text-align: right;
+      border-bottom: 1px solid #ffecef;
+    }
+    
+    .tabela-simples td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: 600;
+      color: #ff6b8b;
+      margin-right: 10px;
+    }
+    
+    .tabela-simples td:last-child {
+      border-bottom: none;
+    }
+    
+    .tabela-simples tr:hover td {
+      background: transparent;
+    }
+    
+    .tabela-simples tr:hover td:first-child {
+      padding-left: 15px;
+    }
+    
+    .tabela-simples td:first-child::before,
+    .tabela-simples tr:hover td:first-child::before {
+      display: none;
+    }
+    
+    .tabela-simples tr.destaque::after {
+      right: 10px;
+      top: 10px;
+      font-size: 0.6rem;
+    }
+  }
+  
+  /* ====== ANIMAÇÕES ====== */
+  @keyframes fadeInRow {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .tabela-simples tr {
+    animation: fadeInRow 0.4s ease-out forwards;
+  }
+  
+  .tabela-simples tr:nth-child(2) { animation-delay: 0.1s; }
+  .tabela-simples tr:nth-child(3) { animation-delay: 0.2s; }
+  .tabela-simples tr:nth-child(4) { animation-delay: 0.3s; }

@@ -1,0 +1,441 @@
+/* ======================= VARIÁVEIS E FONTES ======================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap');
+
+:root {
+  --primary-color: #ff6b8b;
+  --secondary-color: #ff85a2;
+  --accent-color: #d14d8b;
+  --light-bg: #fff5f5;
+  --text-color: #333;
+  --white: #ffffff;
+  --success-color: #38a169;
+  --error-color: #e53e3e;
+}
+
+/* ======================= RESET & BASE ======================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ======================= LAYOUT ======================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ======================= CABEÇALHO ======================= */
+header {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* ======================= SEÇÃO SOBRE MIM ======================= */
+.sobre-mim {
+  background: #ffe6ec;
+  padding: 40px 20px;
+}
+
+.card-sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  gap: 20px;
+}
+
+.foto-perfil {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+}
+
+.texto h2 {
+  font-family: 'Dancing Script', cursive;
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* ======================= SERVIÇOS ======================= */
+.servicos-section {
+  padding: 40px 20px;
+  background: #fff9fa;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.titulo-servicos {
+  text-align: center;
+  color: var(--accent-color);
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.titulo-servicos::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--secondary-color);
+  margin: 15px auto 0;
+}
+
+.servicos-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.servico-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 133, 162, 0.15);
+}
+
+.servico-titulo {
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  color: var(--white);
+  padding: 18px;
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.servico-descricao { padding: 20px; }
+.servico-lista { padding-left: 20px; }
+.servico-lista li {
+  margin-bottom: 12px;
+  color: #555;
+  position: relative;
+}
+.servico-lista li::before {
+  content: "•";
+  color: var(--secondary-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* ======================= GALERIA ======================= */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 133, 162, 0.3);
+}
+
+/* ======================= TABELA DE PREÇOS ======================= */
+.tabela-simples {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  box-shadow: 0 5px 15px rgba(255, 107, 139, 0.15);
+  display: block;
+}
+
+.tabela-simples thead { display: none; }
+.tabela-simples tbody, .tabela-simples tr, .tabela-simples td {
+  display: block;
+  width: 100%;
+}
+
+.tabela-simples tr {
+  margin-bottom: 15px;
+  border: 1px solid #ffecef;
+  border-radius: 10px;
+}
+
+.tabela-simples td {
+  padding: 12px 15px;
+  text-align: right;
+  border-bottom: 1px solid #ffecef;
+  position: relative;
+}
+
+.tabela-simples td:last-child { border-bottom: none; }
+
+.tabela-simples td::before {
+  content: attr(data-label);
+  float: left;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.tabela-simples td:nth-child(2) {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* ======================= FORMULÁRIOS (AGENDAMENTO E INDICAÇÃO) ======================= */
+.agendamento-section, .indicacao-container {
+  background: linear-gradient(135deg, #fff9fa 0%, #fff0f5 100%);
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 15px;
+}
+
+.agendamento-form, .indicacao-body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+
+.indicacao-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.indicacao-header {
+  background: linear-gradient(135deg, #ff85a2, #ff6b8b);
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+.indicacao-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.badge-promocao {
+  display: inline-block;
+  background: #fff;
+  color: #ff6b8b;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.form-section { margin-bottom: 30px; }
+.form-section h3 {
+  color: #d14d8b;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form-section h3 i { font-size: 1.1rem; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #ffecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff9fa;
+  transition: all 0.3s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 133, 162, 0.2);
+}
+
+/* ======================= BOTÕES ======================= */
+.btn-agendar, .btn-indicar {
+  background: linear-gradient(135deg, #ff85a2 0%, #ff6b8b 100%);
+  color: white;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.btn-indicar { border-radius: 10px; }
+
+.btn-agendar:hover, .btn-indicar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 107, 139, 0.3);
+}
+
+/* ======================= MENSAGEM DE FEEDBACK ======================= */
+.msg-feedback {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid;
+  font-weight: 600;
+  animation: fadeIn 0.5s ease-out;
+}
+.msg-feedback.success {
+  background: #f0fff4;
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+.msg-feedback.error {
+  background: #fff5f5;
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+
+
+/* ======================= WHATSAPP FLOAT & FOOTER ======================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+  transition: transform 0.3s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  margin-top: 60px;
+}
+
+/* ======================= MEDIA QUERIES (TABLET E DESKTOP) ======================= */
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .servicos-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .card-sobre {
+    flex-direction: row;
+    text-align: left;
+    gap: 30px;
+  }
+
+  /* Tabela para Desktop */
+  .tabela-simples {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(255, 107, 139, 0.2);
+  }
+  .tabela-simples thead { display: table-header-group; }
+  .tabela-simples tr {
+    display: table-row;
+    margin-bottom: 0;
+    border: none;
+  }
+  .tabela-simples td {
+    display: table-cell;
+    padding: 16px 25px;
+    text-align: left;
+    border-bottom: 1px solid #fff0f5;
+  }
+  .tabela-simples tr:last-child td { border-bottom: none; }
+  .tabela-simples td::before { display: none; }
+  .tabela-simples th {
+    background: linear-gradient(135deg, #ff85a2 0%, #ff6b8b 100%);
+    color: white;
+    padding: 18px 25px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  .tabela-simples tr:hover td {
+    background: #fff9fa;
+    color: #333;
+  }
+}

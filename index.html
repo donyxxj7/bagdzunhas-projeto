@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Ana Bagdzinski, manicure em Joinville. Especialista em alongamento de gel, unhas postiças e spa dos pés. Agende seu horário e transforme suas unhas!">
+    <title>Portfólio | Bagdzinski - Manicure</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <h1>💅 Ana Bagdzinski | Manicure Iniciante</h1>
+            <p>Transformando unhas em obras de arte!</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="trabalhos">
+            <h2>Meus Trabalhos</h2>
+            <div class="gallery">
+                <img src="https://i.ibb.co/svhvVwvq/Unha-1.jpg" alt="Unha com esmaltação escura e detalhes em brilho.">
+                <img src="https://i.ibb.co/yFdWGbK7/Unha-2.jpg" alt="Unha no formato amendoado com esmalte claro e decoração minimalista.">
+                <img src="https://i.ibb.co/G3t2j4Gr/Unha-3.jpg" alt="Unha quadrada com esmalte rosa e acabamento perfeito.">
+                <img src="https://i.ibb.co/v43zrGW8/Unha-4.jpg" alt="Unhas longas com esmaltação em tons de roxo e lilás.">
+            </div>
+        </section>
+        
+        <div class="servicos-section">
+            <h2 class="titulo-servicos">Detalhes</h2>
+            <div class="servicos-container">
+              <div class="servico-card">
+                <h3 class="servico-titulo">Manicure</h3>
+                <div class="servico-descricao">
+                  <ul class="servico-lista">
+                    <li>Corte e lixamento das unhas</li>
+                    <li>Esmaltação</li>
+                    <li>Remoção cuidadosa de cutículas</li>
+                    <li>Hidratação das mãos</li>
+                    <li>Massagem relaxante</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="servico-card">
+                <h3 class="servico-titulo">Pedicure</h3>
+                <div class="servico-descricao">
+                  <ul class="servico-lista">
+                    <li>Corte e lixamento das unhas</li>
+                    <li>Esmaltação</li>
+                    <li>Remoção de cutículas</li>
+                    <li>Limpeza e cuidados especiais</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="servico-card">
+                <h3 class="servico-titulo">Spa dos Pés</h3>
+                <div class="servico-descricao">
+                  <ul class="servico-lista">
+                    <li>Esfoliação suave</li>
+                    <li>Remoção de calosidades</li>
+                    <li>Hidratação profunda</li>
+                    <li>Massagem relaxante prolongada</li>
+                    <li>Máscara nutritiva</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="servico-card">
+                <h3 class="servico-titulo">Postiças</h3>
+                <div class="servico-descricao">
+                  <ul class="servico-lista">
+                    <li>Corte de cutículas</li>
+                    <li>Colagem das unhas postiças</li>
+                    <li>Aplicação de decoração simples</li>
+                    <li>Acabamento natural</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <table class="tabela-simples">
+            <thead>
+              <tr>
+                <th>Serviço</th>
+                <th>Valor</th> 
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Serviço"><strong>Mão</strong></td>
+                <td data-label="Valor"><strong>R$ 25,00</strong></td>
+              </tr>
+              <tr>
+                <td data-label="Serviço"><strong>Pé</strong></td>
+                <td data-label="Valor"><strong>R$ 35,00</strong></td>
+              </tr>
+              <tr>
+                <td data-label="Serviço"><strong>Alongamento</strong></td>
+                <td data-label="Valor"><strong>R$ 100,00</strong></td>
+              </tr>
+              <tr>
+                <td data-label="Serviço"><strong>Postiça</strong></td>
+                <td data-label="Valor"><strong>R$ 50,00</strong></td>
+              </tr>
+              <tr>
+                <td data-label="Serviço"><strong>Esmaltação</strong></td>
+                <td data-label="Valor"><strong>R$ 35,00</strong></td>
+              </tr>
+              <tr>
+                <td data-label="Serviço"><strong>Manutenção Em Gel</strong></td>
+                <td data-label="Valor"><strong>R$ 80,00</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+        <section class="agendamento-section">
+            <form class="agendamento-form" id="agendamento-form">
+              <div class="form-group">
+                <label for="nome-agendamento">Seu nome completo</label>
+                <input type="text" id="nome-agendamento" placeholder="Ex: Ana Silva" required>
+              </div>
+                
+              <div class="form-group">
+                  <label for="whatsapp-agendamento">Seu WhatsApp</label>
+                  <input type="tel" id="whatsapp-agendamento" placeholder="(00) 00000-0000" required>
+              </div>
+              
+              <div class="form-group">
+                  <label for="servico-agendamento">Serviço desejado</label>
+                  <select id="servico-agendamento" required>
+                      <option value="" disabled selected>Escolha um serviço</option>
+                      <option>Manicure</option>
+                      <option>Pedicure</option>
+                      <option>Unha Postiça</option>
+                      <option>Alongamento de Gel</option>
+                  </select>
+              </div>
+              
+              <div class="form-group">
+                  <label for="data-agendamento">Data preferencial</label>
+                  <input type="date" id="data-agendamento" required>
+              </div>
+              
+              <div class="form-group">
+                  <label for="hora-agendamento">Horário preferencial</label>
+                  <input type="time" id="hora-agendamento" required>
+              </div>
+              
+              <button type="submit" class="btn-agendar">
+                  <i class="fas fa-calendar-check"></i> RESERVAR HORÁRIO
+              </button>
+            </form>
+        </section>
+
+        <div class="indicacao-container">
+          <div class="indicacao-header">
+            <h2>Indique uma amiga</h2>
+            <div class="badge-promocao">GANHE UMA ESMALTAÇÃO GRÁTIS!</div>
+          </div>
+          
+          <form class="indicacao-body" id="indicacao-form">
+            <div class="form-section">
+              <h3><i class="fas fa-user"></i> Seus dados</h3>
+              <div class="form-group">
+                <label for="nome-indicacao">Nome completo</label>
+                <input type="text" id="nome-indicacao" placeholder="Digite seu nome completo" required>
+              </div>
+              <div class="form-group">
+                <label for="whatsapp-indicacao">WhatsApp</label>
+                <input type="tel" id="whatsapp-indicacao" placeholder="(00) 00000-0000" required>
+              </div>
+            </div>
+            
+            <div class="form-section">
+              <h3><i class="fas fa-user-friends"></i> Dados da amiga</h3>
+              <div class="form-group">
+                <label for="amiga-nome-indicacao">Nome completo</label>
+                <input type="text" id="amiga-nome-indicacao" placeholder="Nome da amiga" required>
+              </div>
+              <div class="form-group">
+                <label for="amiga-whatsapp-indicacao">WhatsApp</label>
+                <input type="tel" id="amiga-whatsapp-indicacao" placeholder="(00) 00000-0000" required>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn-indicar">
+              <i class="fas fa-paper-plane"></i> ENVIAR INDICAÇÃO
+            </button>
+          </form>
+        </div>
+
+        <div id="feedback-msg" class="msg-feedback" style="display: none;"></div>
+
+        <section class="sobre-mim">
+            <div class="card-sobre">
+              <img src="https://i.ibb.co/RpBzgwdM/Ana-Olivia.jpg" alt="Foto de perfil de Ana Olívia" class="foto-perfil" />
+              <div class="texto">
+                <h2>Sobre Mim</h2>
+                <p>
+                  Olá! Sou <strong><em>Ana Olívia da Silva de Lima</em></strong>, tenho 17 anos e sou natural de <strong>São Mateus do Sul</strong>, no Paraná. 
+                  Depois de viver em São Paulo, hoje sigo meu sonho em Joinville: transformar unhas em arte. 💅
+                </p>
+                <p>
+                  Sempre fui apaixonada pelo mundo das cores e acredito que as unhas mostram mais do que estilo — 
+                  elas expressam sentimentos, humor e personalidade. 💖
+                </p>
+                <p>
+                  Amo o que faço e coloco muito carinho em cada detalhe. Para mim, atender é cuidar com amor, delicadeza e criatividade.
+                </p>
+              </div>
+            </div>
+        </section>          
+    </main>
+
+    <footer>
+        <p>© 2025 Ana Bagdzinski - Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/5547984887462" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+      <i class="fab fa-whatsapp" style="font-size: 30px; color: white;"></i>
+    </a>
+
+    <script src="js/indicacao.js"></script>
+    <script src="js/scripts.js"></script>    
+</body>
+</html>
