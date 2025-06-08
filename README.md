@@ -62,5 +62,5 @@ Como este é um projeto front-end estático, você não precisa de nenhuma ferra
 
 Feito com ❤️ por **Dony**
 
-* **Meu Portfólio:** [Link para seu portfólio principal]
+* **Meu Portfólio:** Em Desenvolvimento...
 * **GitHub:** [@donyxxj7](https://github.com/donyxxj7)
