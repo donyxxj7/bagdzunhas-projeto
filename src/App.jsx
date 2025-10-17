@@ -101,15 +101,15 @@ function App() {
       icon: Sparkles,
     },
     {
-      titulo: "Pedicure",
-      preco: "R$ 35,00",
+      titulo: "Manicure + Pedicure", // <-- SERVIÇO NOVO
+      preco: "R$ 50,00", // <-- NOVO PREÇO (sugestão, pode alterar)
       descricao:
-        "Corte e lixamento das unhas, esmaltação, remoção de cutículas, limpeza e cuidados especiais.",
-      icon: Heart,
+        "O pacote completo! Cuidados para as mãos e pés, incluindo corte, lixamento, remoção de cutículas e esmaltação.",
+      icon: Heart, // <-- NOVO ÍCONE
     },
     {
       titulo: "Spa dos Pés",
-      preco: "R$ 30,00",
+      preco: "R$ 40,00", // <-- PREÇO ALTERADO
       descricao:
         "Esfoliação suave, remoção de calosidades, hidratação profunda, massagem relaxante prolongada e máscara nutritiva.",
       icon: Star,
