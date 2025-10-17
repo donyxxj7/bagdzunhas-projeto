@@ -124,8 +124,59 @@
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  [data-slot="select-item"] {
+    @apply text-gray-900 dark:text-gray-200;
+  }
+
+  /* Ajuste para itens não selecionados ficarem visíveis */
+  [data-slot="select-item"][data-state="unchecked"] {
+    @apply text-gray-800 dark:text-gray-300;
+  }
+
+  /* Ajuste para fundo do SelectContent */
+  [data-slot="select-content"] {
+    @apply bg-white dark:bg-gray-900;
   }
 }
+/* ===============================
+   CORREÇÃO DEFINITIVA DO SELECT
+   =============================== */
 
+[data-radix-select-content],
+[data-radix-popper-content-wrapper] > div {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.5rem !important;
+  color: #111827 !important; /* texto cinza escuro */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.dark [data-radix-select-content],
+.dark [data-radix-popper-content-wrapper] > div {
+  background-color: #18181b !important;
+  border: 1px solid #3f3f46 !important;
+  color: #f4f4f5 !important; /* texto claro */
+}
+
+[data-radix-select-item],
+[data-radix-select-item-text],
+[data-radix-select-item][data-highlighted] {
+  color: #111827 !important;
+  background-color: transparent !important;
+}
+
+.dark [data-radix-select-item],
+.dark [data-radix-select-item-text],
+.dark [data-radix-select-item][data-highlighted] {
+  color: #f4f4f5 !important;
+  background-color: transparent !important;
+}
+
+/* Hover e item selecionado */
+[data-radix-select-item][data-highlighted] {
+  background-color: #f3f4f6 !important;
+}
+
+.dark [data-radix-select-item][data-highlighted] {
+  background-color: #27272a !important;
+}
